@@ -14,7 +14,7 @@ const App = () => {
         domtoimage.toPng(temp.current).then(function (dataUrl) {
           var img = new Image();
           img.src = dataUrl;
-          window.open(dataUrl,'_blank')
+          window.open().document.write('<img src="' + img.src + '" />');
         })
     }
 
